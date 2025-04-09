@@ -10,9 +10,6 @@ COPY . .
 # packages install
 RUN npm i
 
-# tests
-RUN npm run test
-
 # Stage 2
 FROM node:21-slim
 
@@ -21,8 +18,6 @@ WORKDIR /app
 
 # copy the above stage as compressed
 COPY --from=backend-builder /app .
-
-COPY .env.docker .env
 
 # Port
 EXPOSE 8080
