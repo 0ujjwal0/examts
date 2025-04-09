@@ -14,7 +14,11 @@ dotenv.config();
 connectDB();
 app.use(
   cors({
-    origin: ["http://localhost", "http://localhost:3000"], //https://examly-lovat.vercel.app
+    origin: [
+      "http://localhost",
+      "http://localhost:3000",
+      process.env.FRONTEND_URL,
+    ], //https://examly-lovat.vercel.app
     methods: "GET,POST,PUT,DELETE",
     credentials: true,
   })
@@ -30,5 +34,5 @@ app.use("/api/submission", submissionRoutes);
 
 require("./cron/cron");
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT;
 app.listen(PORT, console.log(`server started on port ${PORT}`));
