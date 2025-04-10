@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: frontend-deployment
-  namespace: examts
+  namespace: examtsfrontend
   labels:
     app: frontend
 spec:
@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: 0ujjwal0/examts-frontend-beta:v2.1.0
+          image: 0ujjwal0/examts-frontend:v2.1.0
           ports:
             - containerPort: 5173
 ---
