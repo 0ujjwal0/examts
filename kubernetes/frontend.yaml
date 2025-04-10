@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: ujjwal0101/examtsfrontend:latest
+          image: ujjwal0101/examtsfront:latest
           ports:
             - containerPort: 5173
 ---
