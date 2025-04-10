@@ -31,7 +31,9 @@ app.use("/api/tests", testRoutes);
 app.use("/api/user", userRoutes);
 app.use("/api/questions", questionRoutes);
 app.use("/api/submission", submissionRoutes);
-
+app.get("/", (req, res) => {
+  res.send("Yay!! Backend of examts app is now accessible");
+});
 require("./cron/cron");
 
 const PORT = process.env.PORT;
