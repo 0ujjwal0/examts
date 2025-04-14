@@ -18,6 +18,7 @@ app.use(
       "http://localhost",
       "http://localhost:3000",
       process.env.FRONTEND_URL,
+      "http://65.0.72.101:31000",
     ], //https://examly-lovat.vercel.app
     methods: "GET,POST,PUT,DELETE",
     credentials: true,
