@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const connectDB = async () => {
   try {
     const conn = await mongoose.connect(
-      "mongodb://192.168.170.83:27017/examts",
+      "mongodb://192.168.33.131:27017/examts",
       {
         useNewUrlParser: true,
         useUnifiedTopology: true,
